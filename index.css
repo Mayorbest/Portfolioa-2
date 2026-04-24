@@ -5,11 +5,15 @@
     box-sizing: border-box;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
-
+*::-webkit-scrollbar {
+    display: none;                   /* Chrome, Safari, Edge, Opera */
+}
 /* Animated Gradient Background */
 body {
     background: linear-gradient(-45deg, #0f172a, #1e293b, #0c4a6e, #0f172a);
     background-size: 400% 400%;
+    scrollbar-width: none;           
+    -ms-overflow-style: none;
     animation: gradientBG 15s ease infinite;
     color: #f8fafc;
     line-height: 1.6;
@@ -188,7 +192,178 @@ nav ul {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     margin-bottom: 1.2rem;
+    scrollbar-width: none;           
+    -ms-overflow-style: none;
+    overflow: auto;
     background: #0f172a; /* Hides white flashes while loading */
+}
+
+.project-card iframe::-webkit-scrollbar {
+    display: none;   
+}
+
+/* --- Skills Section --- */
+#skills {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+#skills h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f8fafc;
+    margin-bottom: 2rem;
+}
+
+.skills-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.skills-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.skill-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.badge {
+    font-weight: 800;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagon shape like the image */
+}
+
+.js-badge { 
+    background: #2563eb; /* Deep blue to match theme */
+    color: #fff; 
+}
+
+.hw-badge { 
+    background: #0ea5e9; /* Lighter blue for contrast */
+    color: #fff; 
+}
+
+.skill-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #f8fafc;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-list {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.skill-list li {
+    color: #cbd5e1;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.card-action {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #cbd5e1;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Right Sidebar Tags */
+.skills-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.skill-tag {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    color: #cbd5e1;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    cursor: default;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+        
+.skill-tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 900px) {
+    .skills-container {
+        flex-direction: column;
+    }
+    .skills-cards {
+        grid-template-columns: 1fr;
+    }
+    .skills-sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .skill-tag {
+        flex: 1;
+        min-width: 80px;
+        padding: 1rem;
+    }
 }
 
 /* Footer */

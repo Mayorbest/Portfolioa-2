@@ -9,10 +9,11 @@
 <body>
     <header>
         <nav>
-            <div class="logo">MayorB.</div>
+            <div class="logo">MayorB Digitals</div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="https://github.com/Mayorbest" target="_blank">GitHub</a></li>
             </ul>
         </nav>
@@ -31,36 +32,86 @@
             </div>
         </section>
 
+        <section id="skills">
+            <h2>Skills at a Glance</h2>
+            <div class="skills-container">
+                
+                <div class="skills-cards">
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="badge js-badge">JS</div>
+                            <h3>Frontend Developer</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>JavaScript (ES6+)</li>
+                            <li>Semantic HTML5 & Modern CSS3</li>
+                            <li>React.js / Vue.js</li>
+                            <li>Grid / Flexbox Layouts</li>
+                            <li>RESTful APIs Integration</li>
+                        </ul>
+                        <div class="card-action">
+                            <button class="btn-outline"><a href="#projects">View Web Projects</a></button>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="badge hw-badge">C++</div>
+                            <h3>Hardware Engineer</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Embedded Systems Design</li>
+                            <li>ESP32 & Arduino Prototyping</li>
+                            <li>Circuit Simulation (Wokwi)</li>
+                            <li>PWM Controllers & Inverters</li>
+                            <li>Hardware-Software Integration</li>
+                        </ul>
+                        <div class="card-action">
+                            <button class="btn-outline">View Schematics</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="skills-sidebar">
+                    <div class="skill-tag">Git</div>
+                    <div class="skill-tag">Figma</div>
+                    <div class="skill-tag">n8n</div>
+                    <div class="skill-tag">IoT</div>
+                </div>
+            </div>
+        </section>
         <section id="projects">
             <h2>Live Projects</h2>
             <div class="projects-grid">
                 
                 <div class="project-card">
-                    <h3>Project Title 1</h3>
-                    <iframe src="https://Mayorbest.github.io/Enerwise/" title="Project 1" loading="lazy"></iframe>
-                    <p>Brief description of the technologies used and the problem this project solves.</p>
-                    <a href="#" class="project-link">Source Code</a>
+                    <h3>Enerwise</h3>
+                    <iframe class="frame" src="https://Mayorbest.github.io/Enerwise/" title="Project 1" loading="lazy"></iframe>
+                    <p>A real time power monitoring software interface, for an hardware device that monitors the power consumption of a household or an organization with solar energy system. It saves fuel and grid electrical supply cost if the power consumption by the house or organization is below or equals 2000W by keeping the household and organization electrical power supply on the solar energy system, else it switches to grid power supply and if the grid power supply is not available there be an alert to the household or organization, if electrical power is needed urgently, so a relay module can be triggered to automatically turn on the Gasoline Electric generator. </p>
+                    <a href="https://Mayorbest.github.io/Enerwise/" class="project-link">Source Code</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Project Title 2</h3>
-                    <iframe src="https://example.com" title="Project 2" loading="lazy"></iframe>
-                    <p>Brief description of the technologies used and the problem this project solves.</p>
-                    <a href="#" class="project-link">Source Code</a>
+                    <h3>CPU SIMULATOR with JS</h3>
+                    <iframe src="https://mayorbest.github.io/CPU_Simulator_JS/" title="Project 2" loading="lazy"></iframe>
+                    <p> A live CPU Simulator module built strictly with Javascript to carry out the life cycle of a CPU, The Fetch-Decode-Execute(FDE) cycle Brief description of the technologies used and the problem this project solves.</p>
+                    <a href="https://mayorbest.github.io/CPU_Simulator_JS/" target="_blank" class="project-link">Source Code</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Project Title 3</h3>
-                    <iframe src="https://example.com" title="Project 3" loading="lazy"></iframe>
-                    <p>Brief description of the technologies used and the problem this project solves.</p>
-                    <a href="#" class="project-link">Source Code</a>
+                    <h3>Tic Tac Toe Game</h3>
+                    <iframe src=" https://mayorbest.github.io/TicTacToe/" title="Project 3" loading="lazy"></iframe>
+                    <p>A simple Tic Tac Toe gmae built using Javascript technology; the name id, DOM and empty space in the div element Brief description of the technologies used and the problem this project solves.</p>
+                    <a href=" https://mayorbest.github.io/TicTacToe/" target="_blank" class="project-link">Source Code</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Project Title 4</h3>
-                    <iframe src="https://example.com" title="Project 4" loading="lazy"></iframe>
-                    <p>Brief description of the technologies used and the problem this project solves.</p>
-                    <a href="#" class="project-link">Source Code</a>
+                    <h3>Basic Calculator</h3>
+                    <iframe src="https://Mayorbest.github.io/Calculator/" title="Project 4" loading="lazy"></iframe>
+                    <p>A basic BODMAS calculator built with Javascript, used to master function and DOM manipulation Brief description of the technologies used and the problem this project solves.</p>
+                    <a href="https://mayorbest.github.io/Calculator/" target="_blank" class="project-link">Source Code</a>
                 </div>
 
             </div>
@@ -68,7 +119,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 MayorB. Built for the Hackathon.</p>
+        <p>&copy; 2026 MayorB.</p>
     </footer>
 </body>
 </html>
